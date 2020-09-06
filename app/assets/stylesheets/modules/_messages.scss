@@ -1,6 +1,41 @@
 * {
   box-sizing: border-box;
 }
+
+
+.Bar {
+  color:black;
+  width: 100%;
+}
+
+.Header {
+  background-color:#EEEEEE;
+  height: 100px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  width: 1600px;
+  &__title{
+  position: relative;
+  padding: 0.1em 0.5em;
+  background: -webkit-linear-gradient(to right, rgb(255, 186, 115), transparent);
+  background: linear-gradient(to right, rgb(255, 186, 115), transparent);
+  color: #545454;
+  font-size: 30px;
+  width: 400px;
+  }
+  .Header__List{
+    height: 20px;
+    width: 260px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  } 
+  .Header__name{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
 .post{
   background-color: #CCFFCC;
   height: 100vh;
