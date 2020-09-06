@@ -1,0 +1,21 @@
+.post
+  .postarea
+    .postcenter
+      .posttop
+        %h3 投稿して、スポーツを盛り上げよう！！！
+      .postform
+        = form_with(model: @post, local: true) do |form|
+          .posttitle
+            = form.text_field :title, placeholder: "タイトル",class: "posttitle__form"
+          .posttext  
+            = form.text_area :text, placeholder: "詳細",class: "posttext__form"
+          .postgenre  
+            = form.collection_select :genre_id ,Genre.all, :id,:name ,class: "postgenre__form"
+          .postbutton 
+            = form.submit "編集する",class: "newbutton"
+
+
+
+
+
+  

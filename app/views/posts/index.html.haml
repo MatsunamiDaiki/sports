@@ -1,3 +1,22 @@
-.postbottan
-    =link_to"投稿する", new_post_path
-       
+.post    
+  .postarea
+    .postlink
+      =link_to"投稿する", new_post_path
+    .list
+      -@posts.each do |post| 
+        .select
+          .listshow
+            = link_to '詳細', post_path(post.id)
+          .list.edit
+            = link_to '編集', edit_post_path(post.id)
+          .listdelete  
+            = link_to '削除', post_path(post.id), method: :delete 
+        .listbox
+          .listtitle
+            =post.title
+          .listgnere
+            =post.genre.name  
+          .list
+            =post.text  
+          
+           
