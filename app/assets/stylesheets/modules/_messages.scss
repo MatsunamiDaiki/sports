@@ -1,3 +1,68 @@
 * {
   box-sizing: border-box;
 }
+.post{
+  background-color: #CCFFCC;
+  height: 100vh;
+}
+
+.postarea{
+  background-color: #FFFFAA;
+  margin: 0 150px;
+  height: 100vh;
+  
+}
+.postcenter{
+  text-align: center;
+  
+}
+
+.posttop{
+    font-size: large;
+    color: #330099;
+    
+}
+
+.postform{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.posttitle{
+  margin-bottom: 20px;
+  &__form{
+    width: 320px;
+  }
+}
+
+.posttext{
+  margin-bottom: 20px;
+  &__form{
+    border: inset;
+    width: 350px;
+    height: 200px; 
+  }
+}
+
+.postgenre{
+  margin-bottom: 20px;
+  &__form{
+    height: 400px; 
+    width: 150px;
+  }
+  
+}
+
+.postbutton {
+  margin-top: 50px;
+  .newbutton{
+    font-size: 30px;
+    height: 80px;
+    width: 400px;
+    background-color: #00ffff;
+    border-radius: 10px;
+    border: 1px solid #C0C0C0;
+  }
+}
+
