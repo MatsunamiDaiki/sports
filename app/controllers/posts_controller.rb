@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only:[ :edit, :show]
+  
   def index
     @posts = Post.all
   end
@@ -17,9 +19,32 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    if @post.destroy
+      redirect_to root_path
+    end
+  end
+
+  def edit
+ 
+  end
+
+  def show
+    
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+      redirect_to root_path
+  end
 
   private
   def post_params
-    params.require(:post).permit(:title,:text,:genere_id)
+    params.require(:post).permit(:title,:text,:genre_id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
