@@ -9,7 +9,6 @@
 }
 
 .Header {
-  background-color:#EEEEEE;
   height: 100px;
   padding: 0 20px;
   display: flex;
@@ -102,3 +101,40 @@
   }
 }
 
+.login{
+  background-color: #000080;
+  height: 100vh;
+  width: 1600px;
+}
+
+.loginarea{
+  background-color:#99FFFF;
+  margin: 0 150px;
+  height: 100vh;
+  .logincenter{
+    text-align: center;
+    .logintop{
+      font-size: large;
+      color: #330099;
+    }
+  }
+}
+
+.loginform{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loginmail{
+    margin-bottom: 20px;
+    .formemail{
+      width: 320px;
+    }
+  }
+  .loginpass{
+    margin-bottom: 20px;
+    .formpass{
+      width: 320px;
+    }
+  }
+}

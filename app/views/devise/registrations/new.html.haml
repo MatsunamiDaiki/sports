@@ -1,26 +1,26 @@
-.contents.row
-  .container
-    %h2 新規登録
-    = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
-      = devise_error_messages!
-      .field
-        = f.label :nickname
-        %br/
-        = f.text_field :nickname, autofocus: true, maxlength: "6"
-      .field
-        = f.label :email
-        %br/
-        = f.email_field :email
-      .field
-        = f.label :password
-        - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} characters minimum)
-        %br/
-        = f.password_field :password, autocomplete: "off"
-      .field
-        = f.label :password_confirmation
-        %br/
-        = f.password_field :password_confirmation, autocomplete: "off"
-      .actions
-        = f.submit "Sign up"
+.login
+  .loginarea
+    .logincenter
+      .logintop
+        %h2 新規登録画面
+      .loginform  
+        = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+          = devise_error_messages!
+          .loginmail
+            = f.label :ニックネーム
+            %br/
+            = f.text_field :nickname, autofocus: true, maxlength: "6",class: "formemail"
+          .loginmail
+            = f.label :メールアドレス
+            %br/
+            = f.email_field :email,class: "formemail"
+          .loginmail
+            = f.label :パスワード
+            %br/
+            = f.password_field :password, autocomplete: "off",class: "formemail"
+          .loginmail
+            = f.label :パスワード確認用
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "off",class: "formemail"
+          .actions
+            = f.submit "新規登録"
