@@ -1,25 +1,32 @@
 .post    
   .postarea
     .postlink
-      =link_to"投稿する", new_post_path
+      =link_to"投稿する", new_post_path,class: "newpost"
     .list
       -@posts.each do |post| 
-        .select
-          -if user_signed_in? && current_user.id == post.user_id
-            .listshow
-              = link_to '詳細', post_path(post.id)
-            .list.edit
-              = link_to '編集', edit_post_path(post.id)
-            .listdelete  
-              = link_to '削除', post_path(post.id), method: :delete 
         .listbox
-          .listtitle
-            =post.title
-          .listgnere
-            =post.genre.name  
-          .list
-            =post.text  
-          .listname
-            ="投稿者: #{post.user.nickname}"  
-          
-           
+          .listboxarea
+            .listinfo
+              .select
+                -if user_signed_in? && current_user.id == post.user_id
+                  .listshow
+                    = link_to '詳細', post_path(post.id)
+                  .listedit
+                    = link_to '編集', edit_post_path(post.id)
+                  .listdelete  
+                    = link_to '削除', post_path(post.id), method: :delete 
+              .room
+                .roomtitle
+                  ="タイトル: #{post.title}"
+                .roomgnere
+                  ="種目: #{post.genre.name}"  
+                .roomexplain
+                  ="詳細: #{post.text}"  
+                .roomname
+                  ="投稿者: #{post.user.nickname}"  
+            .like
+              いいね      
+
+
+            
+            

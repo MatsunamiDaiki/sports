@@ -138,3 +138,50 @@
     }
   }
 }
+.postlink{
+  text-align: center;
+  .newpost{
+    font-size: 30px;
+    height: 80px;
+    width: 600px;
+    background-color: #00ffff;
+    border-radius: 10px;
+    border: 1px solid #C0C0C0
+  }
+}
+
+.list{
+  margin: 40px 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  .listbox{
+    margin-bottom: 45px;
+    width: 900px;
+    border: double 5px #4ec4d3;
+    .listboxarea{
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+     
+    }
+  }
+}
+
+
+.select{
+  display: flex;
+  .listshow{
+    margin: 0 10px;
+  }
+
+  .listedit{
+    margin: 0 10px;
+  }
+
+  .listdelete{
+    margin: 0 10px;
+  }
+
+}
