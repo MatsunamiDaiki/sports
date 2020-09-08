@@ -1,0 +1,27 @@
+.all  
+  .sidebar
+    .box
+      .sidename
+        ="タイトル: #{@post.title}"
+      .sidegenre
+        ="種目: #{@post.genre.name}"
+      .sidetext
+        ="詳細: #{@post.text}"
+    .form
+      = form_with(model: [@post, @comment], local: true, id: "new_comment") do |form|
+        = form.text_area :text, placeholder: "コメント投稿", rows: "2" ,class: "textbox"
+        = form.submit "投稿", class: "form__submit"  
+
+  .commentsfield
+    .commenttop
+    %h4 ＜レビュー 一覧＞
+    .commentbox
+      - if @comments
+        - @comments.each do |comment|
+          .commentinfo
+            .commnetname
+              ="ユーザー名: #{comment.user.nickname}"
+            .commentdate  
+              = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+            .commentcontent  
+              = comment.text    

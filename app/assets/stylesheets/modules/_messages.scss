@@ -161,7 +161,7 @@
     width: 900px;
     border: double 5px #4ec4d3;
     .listboxarea{
-      padding: 10px 20px;
+      padding: 10px 25px;
       display: flex;
       justify-content: space-between;
      
@@ -185,3 +185,87 @@
   }
 
 }
+
+.all{
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.sidebar{
+  background-color:#BBBBBB;
+  width: 500px;
+  overflow: scroll;
+  .form{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    padding:10px 5px;
+    justify-content: center;
+    align-items: center;
+    
+    .textbox{
+      width: 400px;
+      height: 120px;
+    }
+    .form__submit{
+      
+    }
+  }
+}
+
+.box{
+  padding: 20px 20px;
+}
+
+.sidetitle{
+  font-size: 22px;
+}
+
+.sidegenre{
+  margin: 10px 0;
+  font-size: 14px;
+  width: 100%;
+}
+
+.sidetext{
+  margin: 10px 0;
+}
+
+
+
+
+
+
+.commentsfield{
+  width: calc(100vw - 500px);
+  height: calc(100vh - 100px);
+  background-color: #fafafa;
+}
+
+.commenttop{
+  text-align: center;
+  width: 1000px;
+  
+}
+.commentbox{
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 35px 40px 0;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  width: 1000px;
+}
+.commentinfo{
+   margin-bottom: 10px;
+ }
+
+ .commnetname{
+   font-size: 15px;
+ }
+ .commentdate{
+   font-size: 10px;
+ }
+
+
+
