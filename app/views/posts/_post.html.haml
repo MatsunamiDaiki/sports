@@ -1,0 +1,22 @@
+.listbox
+  .listboxarea
+    .listinfo
+      .select
+        .listshow
+          = link_to '参加する！', post_path(post.id)
+        -if user_signed_in? && current_user.id == post.user_id
+          .listedit
+            = link_to '編集', edit_post_path(post.id)
+          .listdelete  
+            = link_to '削除', post_path(post.id), method: :delete 
+      .room
+        .roomtitle
+          ="タイトル: #{post.title}"
+        .roomgnere
+          ="種目: #{post.genre.name}"  
+        .roomexplain
+          ="詳細: #{post.text}"  
+        .roomname
+          ="投稿者: #{post.user.nickname}"  
+    .like
+      いいね      
