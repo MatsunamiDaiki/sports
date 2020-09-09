@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   width: 1600px;
+  
   &__title{
   position: relative;
   padding: 0.1em 0.5em;
@@ -188,76 +189,60 @@
 
 }
 
-.all{
-  display: flex;
-  height: calc(100vh - 100px);
+.titlename{
+  font-size: 50px;
 }
 
-.sidebar{
-  background-color:#BBBBBB;
-  width: 500px;
-  overflow: scroll;
-  .form{
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    height: 150px;
-    padding:10px 5px;
-    justify-content: center;
-    align-items: center;
-    
-    .textbox{
-      width: 400px;
-      height: 120px;
-    }
-    .form__submit{
-      
-    }
-  }
+h2 {
+  position: relative;
+  display: inline-block;
+  padding: 0 65px;
+  text-align: center;
 }
 
-.box{
-  padding: 20px 20px;
+h2:before,
+h2:after {
+  position: absolute;
+  top: calc(50% - 3px);
+  width: 50px;
+  height: 6px;
+  content: '';
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
 }
 
-.sidetitle{
-  font-size: 22px;
+h2:before {
+  left: 0;
 }
 
-.sidegenre{
-  margin: 10px 0;
-  font-size: 14px;
-  width: 100%;
+h2:after {
+  right: 0;
 }
-
-.sidetext{
-  margin: 10px 0;
-}
-
-
-
 
 
 
 .commentsfield{
-  width: calc(100vw - 500px);
-  height: calc(100vh - 100px);
-  background-color: #fafafa;
-}
-
-.commenttop{
-  text-align: center;
-  width: 1000px;
+ 
+  .commenttop{
+    text-align: center;
+    background-color: #CCFFFF;
+    height: 100px;
+    
+  }
+  .commentbox{
+    background-color: #FFFFAA;
+    box-sizing: border-box;
+    padding: 35px 40px 0;
+    overflow: scroll;
+    height: calc(100vh - 280px );
+     .commnetarea{
+      margin: 10px 90px;
+    }
+  }
   
 }
-.commentbox{
-  background-color: #fafafa;
-  box-sizing: border-box;
-  padding: 35px 40px 0;
-  height: calc(100vh - 100px);
-  overflow: scroll;
-  width: 1000px;
-}
+
+
 .commentinfo{
    margin-bottom: 10px;
  }
@@ -268,6 +253,39 @@
  .commentdate{
    font-size: 10px;
  }
+.formarea{
+  text-align: center;
+}
+.form{
+ text-align: center;
+}
+ .textbox{
+  width: 400px;
+  height: 100px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  background-image: none
+}
 
-
-
+.form__submit{
+  width: 100px;
+  height: 50px;
+  padding: 5px 8px;
+  border-radius: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #aaa;
+  background-image: none;
+  background-color: #666;
+  font-size: 20px;
+  color: #fff;
+}
+.form__submit:active{
+  border-bottom: none;
+  background-color: #888;
+}
