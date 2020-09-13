@@ -14,16 +14,14 @@ $(function() {
       <a href="/posts/${post.id}/edit">編集</a>
       </div>
       <div class="listdelete">
-      <a rel="nofollow" data-method="delete" href="/posts/9">${post.id}</a>
+      <a rel="nofollow" data-method="delete" href="/posts/${post.id}">削除</a>
       </div>
       </div>
       <div class="room">
       <div class="roomtitle">
       ${post.title}
       </div>
-      <div class="roomgnere">
-      ${post.genre_id}
-      </div>
+      
       <div class="roomexplain">
       ${post.text}
       </div>
@@ -49,9 +47,7 @@ $(function() {
       <div class="roomtitle">
       ${post.title}
       </div>
-      <div class="roomgnere">
-      ${post.genre_id}
-      </div>
+      
       <div class="roomexplain">
       ${post.text}
       </div>
