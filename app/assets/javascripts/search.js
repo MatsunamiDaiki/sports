@@ -62,8 +62,8 @@ $(function() {
     }
   }
 
-  function appendErrMsgToHTML(msg) {
-    let html = `<div class='name'>${ msg }</div>`
+  function appenderror(message) {
+    let html = `<div class='name'>${ message }</div>`
     search_post.append(html);
   }
 
@@ -83,7 +83,7 @@ $(function() {
         });
       }
       else {
-        appendErrMsgToHTML("一致する投稿がありません");
+        appenderror("一致する投稿がありません");
       }
     })  
   });
