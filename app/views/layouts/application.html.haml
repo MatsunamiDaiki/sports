@@ -8,11 +8,10 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     =javascript_include_tag 'application' 
   %body
-  -# = render 'layouts/notifications'
   .Bar
     .Header
       .Header__title
-        題名 
+        SPORTS
       -if user_signed_in? 
         %ul.Header__List 
           %li.Header__name
